@@ -7,8 +7,6 @@
 body {
   background: linear-gradient(to right, #121318, #0F1B31 );
   scroll-behavior: smooth;
-
-  @apply font-mont text-theme-white;
 }
 
 @media (max-width: 1080px) {
@@ -21,4 +19,13 @@ body {
   html {
     font-size: 87.5%;
   }
+}
+
+.donate h3, h2, h1 {
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.donate h3 strong {
+  color: #375DFE;
 }
