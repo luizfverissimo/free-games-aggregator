@@ -3,7 +3,7 @@ import GameCard from './GameCard';
 
 import { attributes, html } from '../content/donate.md';
 
-function MainList() {
+function MainList({gameData}) {
   return (
     <div className='w-full my-8 max-w-[1415px] flex flex-col items-center'>
       <h1 className='mb-8 font-semibold  text-4xl'>
@@ -12,11 +12,18 @@ function MainList() {
       </h1>
 
       <div className='w-full flex justify-between'>
-        <div className='w-full flex justify-between flex-1 mr-9'>
-          <GameCard />
-          <GameCard />
-          <GameCard />
-          <GameCard />
+        <div className='w-full grid grid-cols-4 flex-1 mr-9'>
+          {gameData && (
+            gameData.map((game, index) => {
+              if(!game.attributes.isHighlight) {
+                return
+              }
+
+              return (
+                <GameCard key={index} gameData={game} />
+              )
+            })
+          )}
         </div>
         <div className='flex max-w-[300px] flex-col items-center'>
           <div className='bg-gray-400 w-[300px] h-[250px]' />
