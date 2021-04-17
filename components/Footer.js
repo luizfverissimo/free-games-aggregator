@@ -1,14 +1,41 @@
-import {attributes, html} from '../content/footer.md'
+import Link from 'next/link';
+import LogoWhite from './LogoWhite';
 
 function Footer() {
   return (
-    <section className='w-full max-w-[1440px] flex flex-col items-center my-8'>
-      <div className='w-full flex justify-between'>
-        <div className='donate w-1/2' dangerouslySetInnerHTML={{__html: html}}>
+    <footer className='w-full bg-black py-6'>
+      <div className='w-full max-w-[1440px] mx-auto flex justify-between items-center text-sm font-semibold'>
+        <div className='flex items-center'>
+          <LogoWhite />
+          <p className='ml-6'>
+            2021 ©{' '}
+            <a className='underline' href='http://lfverissimo.com'>
+              LF Verissimo
+            </a>
+          </p>
         </div>
-        <div className='bg-gray-400 mt-8 w-[300px] h-[250px]' />
+        <div className='flex items-center'>
+          <Link href='/about'>
+            <a className='underline mx-6'>About</a>
+          </Link>
+          <Link href='/'>
+            <a className='underline mx-6'>Privacy Police</a>
+          </Link>
+          <Link href='/'>
+            <a className='underline mx-6'>Terms of Use</a>
+          </Link>
+          <Link href='/'>
+            <a className='underline mx-6'>Terms of Use</a>
+          </Link>
+          <p className='mr-6'>
+            Created by{' '}
+            <a href='http://lfverissimo.com' className='underline'>
+              LF Verissimo
+            </a>
+          </p>
+        </div>
       </div>
-    </section>
+    </footer>
   );
 }
 

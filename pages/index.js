@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import GameCard from '../components/GameCard';
 import Header from '../components/Header';
 import MainList from '../components/MainList';
+import EndSection from '../components/EndSection';
 import Footer from '../components/Footer';
 
 const importGames = async () => {
@@ -19,7 +20,7 @@ const importGames = async () => {
   return Promise.all(
     markdownFiles.map(async (path) => {
       const markdown = await import(`../content/games/${path}`);
-      return { ...markdown };
+      return { ...markdown, slug: path.substring(0, path.length - 3) };
     })
   );
 };
@@ -63,7 +64,8 @@ const Home = ({ gamesList }) => {
             })}
           </div>
         </section>
-        <Footer />
+        <EndSection />
+        <Footer/>
       </main>
     </ModalProvider>
   );

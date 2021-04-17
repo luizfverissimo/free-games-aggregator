@@ -1,17 +1,16 @@
-import { useContext, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
-import { ModalContext } from '../context/ModalContext';
 import Button from './Button';
 
 function GameCard({ gameData }) {
-  const { openModal } = useContext(ModalContext);
+  const router = useRouter();
 
   return (
     <div className='w-56 flex flex-col items-center relative'>
       {gameData && (
         <>
           <div className='w-full shadow-md transition-all hover:ring-2 ring-theme-green'>
-            <a className="cursor-pointer" onClick={() => openModal(gameData)}>
+            <a className='cursor-pointer' onClick={() => router.push(`games/${gameData.slug}`)}>
               <img
                 src={gameData.attributes.imageUrl}
                 alt='The Witcher 3'
@@ -40,7 +39,7 @@ function GameCard({ gameData }) {
           <p className='w-full mt-3 mb-1 truncate font-semibold text-sm text-theme-white text-right'>
             {gameData.attributes.textPeriod}
           </p>
-          <Button onClickButton={() => openModal(gameData)}>
+          <Button onClickButton={() => router.push(`games/${gameData.slug}`)}>
             Get the Game! 👉
           </Button>
         </>
