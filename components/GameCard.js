@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+
+import { ModalContext } from '../context/ModalContext';
 import Button from './Button';
 
 function GameCard() {
+  const { openModal } = useContext(ModalContext);
+
   return (
     <div className='w-56 flex flex-col items-center relative'>
       <div className='w-full shadow-md transition-all hover:ring-2 ring-theme-green'>
@@ -27,7 +32,7 @@ function GameCard() {
       <p className='w-full mt-3 mb-1 truncate font-semibold text-sm text-theme-white text-right'>
         From 12/03 to 19/03
       </p>
-      <Button>Get the Game! 👉</Button>
+      <Button onClickButton={openModal}>Get the Game! 👉</Button>
     </div>
   );
 }
