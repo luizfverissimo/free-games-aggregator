@@ -6,10 +6,14 @@ function Footer() {
     <footer className='w-full bg-black py-6'>
       <div className='w-full max-w-[1440px] mx-auto flex justify-between items-center text-sm font-semibold'>
         <div className='flex items-center'>
-          <LogoWhite />
+          <Link href='/'>
+            <a>
+              <LogoWhite />
+            </a>
+          </Link>
           <p className='ml-6'>
             2021 ©{' '}
-            <a className='underline' href='http://lfverissimo.com'>
+            <a className='underline' href='http://lfverissimo.com' target="_blank" rel="external" rel="noopener">
               LF Verissimo
             </a>
           </p>
@@ -18,18 +22,18 @@ function Footer() {
           <Link href='/about'>
             <a className='underline mx-6'>About</a>
           </Link>
-          <Link href='/'>
+          <Link href='/privacy-police'>
             <a className='underline mx-6'>Privacy Police</a>
           </Link>
-          <Link href='/'>
+          <Link href='/terms-of-use'>
             <a className='underline mx-6'>Terms of Use</a>
           </Link>
-          <Link href='/'>
-            <a className='underline mx-6'>Terms of Use</a>
+          <Link href='/contact'>
+            <a className='underline mx-6'>Contact</a>
           </Link>
-          <p className='mr-6'>
+          <p className='ml-6'>
             Created by{' '}
-            <a href='http://lfverissimo.com' className='underline'>
+            <a href='http://lfverissimo.com' target="_blank" rel="external" rel="noopener" className='underline'>
               LF Verissimo
             </a>
           </p>
