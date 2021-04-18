@@ -1,7 +1,9 @@
 backend:
-  name: git-gateway
-  branch: master
-media_folder: static/img
+  name: github
+  repo: luizfverissimo/free-games-aggregator
+  branch: main
+  site_domain: freegames4you.netlify.app
+media_folder: public/static/img
 slug:
   encoding: 'ascii'
   clean_accents: true
@@ -10,37 +12,113 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - label: 'Home'
-        name: 'home'
-        file: 'content/home.md'
+      - label: 'End Section'
+        name: 'end-section'
+        file: 'content/endSection.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
       - label: 'About'
         name: 'about'
         file: 'content/about.md'
         fields:
           - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Publish Date', name: 'date', widget: 'datetime' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-  - label: 'Blog'
-    name: 'blog'
-    folder: 'content/blogPosts'
+      - label: 'Contact'
+        name: 'contact'
+        file: 'content/contact.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Indication'
+        name: 'indication'
+        file: 'content/indication.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Report'
+        name: 'report'
+        file: 'content/report.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Privacy and Police'
+        name: 'privacy'
+        file: 'content/privacy.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Terms of Use'
+        name: 'terms'
+        file: 'content/terms.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Donate'
+        name: 'donate'
+        file: 'content/donate.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Link Button', name: 'hrefButton', widget: 'string' }
+          - { label: 'Text Button', name: 'buttonText', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+  - label: 'Games'
+    name: 'games'
+    folder: 'content/games'
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          required: true,
+          label: 'IsActive',
+          name: 'IsActive',
+          widget: 'boolean',
+          default: true,
+          required: true
         }
       - {
-          label: 'Featured Image',
-          name: 'thumbnail',
-          widget: 'image',
-          required: true,
+          label: 'isHighlight',
+          hint: 'Must be only 5 games on Highlight',
+          name: 'isHighlight',
+          widget: 'boolean',
+          default: true,
+          required: true
+        }
+      - {
+          label: 'Plataform',
+          name: 'plataform',
+          widget: 'select',
+          options: ['PC', 'PS4', 'PS5', 'PS4 and PS5', 'MULTI', 'XBOX']
+        }
+      - { label: 'Store', name: 'store', widget: 'string', required: true }
+      - {
+          label: 'Image URL',
+          name: 'imageUrl',
+          widget: 'string',
+          required: true
+        }
+      - {
+          label: 'Game Link',
+          name: 'link',
+          widget: 'string',
+          required: false
+        }
+      - {
+          label: 'Text Period',
+          name: 'textPeriod',
+          widget: 'string',
+          required: true
+        }
+      - {
+          label: 'Start Period (YYYY-MM-DD) moment.js',
+          name: 'startPeriod',
+          widget: 'string',
+          required: true
+        }
+        - {
+          label: 'End Period (YYYY-MM-DD) moment.js',
+          name: 'endPeriod',
+          widget: 'string',
+          required: false
         }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
