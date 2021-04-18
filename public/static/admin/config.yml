@@ -48,7 +48,7 @@ collections:
           label: 'Game Link',
           name: 'link',
           widget: 'string',
-          required: false
+          required: true
         }
       - {
           label: 'Text Period',
