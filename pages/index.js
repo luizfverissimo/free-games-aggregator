@@ -27,47 +27,51 @@ const importGames = async () => {
 
 const Home = ({ gamesList }) => {
   return (
-    <ModalProvider>
-      <main className='w-full flex flex-col items-center font-mont text-theme-white'>
-        <Head>
-          <title>Free Games 4YOU</title>
-        </Head>
-        <Header />
-        <section className='w-full mt-8 relative flex justify-center'>
-          <div className='w-full h-full absolute inset-0 bg-theme-white opacity-10 z-[-1]' />
-          <MainList gameData={gamesList} />
-        </section>
-        <section className='w-full max-w-[1440px] flex flex-col items-center my-8'>
-          <div className='bg-gray-400 w-[728px] h-[90px]' />
-          <h2 className='mt-8 font-bold text-2xl'>More free games:</h2>
-          <div className='w-full grid grid-cols-5 items-center mt-8 gap-8'>
-            {gamesList.map((game, index) => {
-              if(game.attributes.isHighlight) {
-                return
-              }
+    <>
+      {gamesList && (
+        <ModalProvider>
+          <main className='w-full flex flex-col items-center font-mont text-theme-white'>
+            <Head>
+              <title>Free Games 4YOU</title>
+            </Head>
+            <Header />
+            <section className='w-full mt-8 relative flex justify-center'>
+              <div className='w-full h-full absolute inset-0 bg-theme-white opacity-10 z-[-1]' />
+              <MainList gameData={gamesList} />
+            </section>
+            <section className='w-full max-w-[1440px] flex flex-col items-center my-8'>
+              <div className='bg-gray-400 w-[728px] h-[90px]' />
+              <h2 className='mt-8 font-bold text-2xl'>More free games:</h2>
+              <div className='w-full grid grid-cols-5 items-center mt-8 gap-8'>
+                {gamesList.map((game, index) => {
+                  if (game.attributes.isHighlight) {
+                    return;
+                  }
 
-              if (moment(game.attributes.startPeriod).isBefore(moment())) {
-                return <GameCard key={index} gameData={game} />;
-              }
-            })}
-          </div>
+                  if (moment(game.attributes.startPeriod).isBefore(moment())) {
+                    return <GameCard key={index} gameData={game} />;
+                  }
+                })}
+              </div>
 
-          <div className='bg-gray-400 mt-8 w-[728px] h-[90px]' />
-          <h2 className='mt-8 font-bold text-2xl'>
-            Watch out for new free games:
-          </h2>
-          <div className='w-full grid grid-cols-5 items-center mt-8 gap-8'>
-            {gamesList.map((game, index) => {
-              if (moment(game.attributes.startPeriod).isAfter(moment())) {
-                return <GameCard key={index} gameData={game} />;
-              }
-            })}
-          </div>
-        </section>
-        <EndSection />
-        <Footer/>
-      </main>
-    </ModalProvider>
+              <div className='bg-gray-400 mt-8 w-[728px] h-[90px]' />
+              <h2 className='mt-8 font-bold text-2xl'>
+                Watch out for new free games:
+              </h2>
+              <div className='w-full grid grid-cols-5 items-center mt-8 gap-8'>
+                {gamesList.map((game, index) => {
+                  if (moment(game.attributes.startPeriod).isAfter(moment())) {
+                    return <GameCard key={index} gameData={game} />;
+                  }
+                })}
+              </div>
+            </section>
+            <EndSection />
+            <Footer />
+          </main>
+        </ModalProvider>
+      )}
+    </>
   );
 };
 
