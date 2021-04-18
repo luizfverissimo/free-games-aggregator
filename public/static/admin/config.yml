@@ -62,8 +62,8 @@ collections:
           - { label: 'Link Button', name: 'hrefButton', widget: 'string' }
           - { label: 'Text Button', name: 'buttonText', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }
-  - label: 'Games'
-    name: 'games'
+  - name: 'games'
+    label: 'Games'
     folder: 'content/games'
     create: true
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
