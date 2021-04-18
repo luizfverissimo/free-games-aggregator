@@ -75,7 +75,7 @@ const Home = ({ gamesList }) => {
   );
 };
 
-export async function getSideProps() {
+export async function getStaticProps() {
   const gamesList = await importGames();
 
   return {
