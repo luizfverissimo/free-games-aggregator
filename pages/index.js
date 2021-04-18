@@ -71,7 +71,7 @@ const Home = ({ gamesList }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getSideProps() {
   const gamesList = await importGames();
 
   return {
