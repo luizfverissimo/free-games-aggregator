@@ -32,8 +32,8 @@ collections:
           required: true
         }
       - {
-          label: 'Plataform',
-          name: 'plataform',
+          label: 'Platform',
+          name: 'platform',
           widget: 'select',
           options: ['PC', 'PS4', 'PS5', 'PS4 and PS5', 'MULTI', 'XBOX']
         }
@@ -58,12 +58,14 @@ collections:
         }
       - {
           label: 'Start Period (YYYY-MM-DD) moment.js',
+          hint: Add "" arround the date,
           name: 'startPeriod',
           widget: 'string',
           required: true
         }
       - {
           label: 'End Period (YYYY-MM-DD) moment.js',
+          hint: Add "" arround the date,
           name: 'endPeriod',
           widget: 'string',
           required: false
