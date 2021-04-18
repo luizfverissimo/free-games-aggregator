@@ -9,59 +9,6 @@ slug:
   clean_accents: true
   sanitize_replacement: '_'
 collections:
-  - name: 'pages'
-    label: 'Pages'
-    files:
-      - label: 'End Section'
-        name: 'end-section'
-        file: 'content/endSection.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'About'
-        name: 'about'
-        file: 'content/about.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Contact'
-        name: 'contact'
-        file: 'content/contact.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Indication'
-        name: 'indication'
-        file: 'content/indication.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Report'
-        name: 'report'
-        file: 'content/report.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Privacy and Police'
-        name: 'privacy'
-        file: 'content/privacy.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Terms of Use'
-        name: 'terms'
-        file: 'content/terms.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
-      - label: 'Donate'
-        name: 'donate'
-        file: 'content/donate.md'
-        fields:
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Link Button', name: 'hrefButton', widget: 'string' }
-          - { label: 'Text Button', name: 'buttonText', widget: 'string' }
-          - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'games'
     label: 'Games'
     folder: 'content/games'
@@ -115,10 +62,63 @@ collections:
           widget: 'string',
           required: true
         }
-        - {
+      - {
           label: 'End Period (YYYY-MM-DD) moment.js',
           name: 'endPeriod',
           widget: 'string',
           required: false
         }
       - { label: 'Body', name: 'body', widget: 'markdown', required: true }
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - label: 'End Section'
+        name: 'end-section'
+        file: 'content/endSection.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'About'
+        name: 'about'
+        file: 'content/about.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Contact'
+        name: 'contact'
+        file: 'content/contact.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Indication'
+        name: 'indication'
+        file: 'content/indication.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Report'
+        name: 'report'
+        file: 'content/report.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Privacy and Police'
+        name: 'privacy'
+        file: 'content/privacy.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Terms of Use'
+        name: 'terms'
+        file: 'content/terms.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Donate'
+        name: 'donate'
+        file: 'content/donate.md'
+        fields:
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Link Button', name: 'hrefButton', widget: 'string' }
+          - { label: 'Text Button', name: 'buttonText', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
