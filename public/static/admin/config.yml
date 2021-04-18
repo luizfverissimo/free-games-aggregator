@@ -17,8 +17,8 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string', required: true }
       - {
-          label: 'IsActive',
-          name: 'IsActive',
+          label: 'isActive',
+          name: 'isActive',
           widget: 'boolean',
           default: true,
           required: true

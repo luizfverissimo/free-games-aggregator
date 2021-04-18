@@ -1,6 +1,6 @@
 ---
 title: "Deponia: The Complete Journey"
-IsActive: true
+isActive: true
 isHighlight: true
 platform: PC
 store: Epic Games Store
