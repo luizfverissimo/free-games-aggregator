@@ -68,14 +68,14 @@ const Contact = () => {
         <section className='w-full mt-8 relative flex justify-center'>
           <div className='w-full h-full absolute inset-0 bg-theme-white opacity-10 z-[-1]' />
 
-          <div className='w-full max-w-[1440px] flex flex-col my-12'>
+          <div className='w-full px-8 xl:px-0 max-w-[1440px] flex flex-col my-12'>
             <h1 className='text-3xl'>{attributes.title}</h1>
             <div
               className='donate modal-text w-full max-w-[75ch] flex flex-col mt-12 font-mont text-lg text-theme-white'
               dangerouslySetInnerHTML={{ __html: html }}
             ></div>
 
-            <div className='w-full px-4 xl:px-0 sm:w-1/2 flex flex-col items-start justify-start'>
+            <div className='w-full px-4 xl:px-0 xl:w-1/2 flex flex-col items-start justify-start'>
               <label
                 htmlFor='Name'
                 className='mt-4 sm:mt-8 font-pop font-bold text-lg text-theme-white'

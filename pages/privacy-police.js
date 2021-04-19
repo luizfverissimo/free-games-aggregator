@@ -15,7 +15,7 @@ const About = () => (
       <section className='w-full mt-8 relative flex justify-center'>
         <div className='w-full h-full absolute inset-0 bg-theme-white opacity-10 z-[-1]' />
 
-        <div className='w-full max-w-[1440px] flex flex-col my-12'>
+        <div className='w-full px-8 xl:px-0 max-w-[1440px] flex flex-col my-12'>
           <h1 className="text-3xl">{attributes.title}</h1>
           <div
             className='donate modal-text w-full max-w-[75ch] flex flex-col mt-12 font-mont text-lg text-theme-white'

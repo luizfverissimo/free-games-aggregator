@@ -39,10 +39,10 @@ const Home = ({ gamesList }) => {
               <div className='w-full h-full absolute inset-0 bg-theme-white opacity-10 z-[-1]' />
               <MainList gameData={gamesList} />
             </section>
-            <section className='w-full max-w-[1440px] flex flex-col items-center my-8'>
-              <div className='bg-gray-400 w-[728px] h-[90px]' />
+            <section className='w-full  flex flex-col items-center my-8 xl:max-w-[1440px]'>
+              <div className='bg-gray-400 w-[300px] h-[50px] md:w-[728px] md:h-[90px]' />
               <h2 className='mt-8 font-bold text-2xl'>More free games:</h2>
-              <div className='w-full grid grid-cols-5 items-center mt-8 gap-8'>
+              <div className='w-full flex flex-wrap px-8 justify-center sm:justify-between items-center mt-8 xl:gap-8 xl:px-0 xl:grid xl:grid-cols-5'>
                 {gamesList.map((game, index) => {
                   if (game.attributes.isHighlight) {
                     return;
@@ -54,11 +54,11 @@ const Home = ({ gamesList }) => {
                 })}
               </div>
 
-              <div className='bg-gray-400 mt-8 w-[728px] h-[90px]' />
+              <div className='bg-gray-400 mt-8 w-[300px] h-[50px] md:w-[728px] md:h-[90px]' />
               <h2 className='mt-8 font-bold text-2xl'>
                 Watch out for new free games:
               </h2>
-              <div className='w-full grid grid-cols-5 items-center mt-8 gap-8'>
+              <div className='w-full flex flex-wrap px-8 justify-center sm:justify-between items-center mt-8 xl:gap-8 xl:px-0 xl:grid xl:grid-cols-5'>
                 {gamesList.map((game, index) => {
                   if (moment(game.attributes.startPeriod).isAfter(moment())) {
                     return <GameCard key={index} gameData={game} />;

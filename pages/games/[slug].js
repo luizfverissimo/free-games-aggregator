@@ -21,11 +21,11 @@ const Post = ({ gameInfo }) => {
         <section className='w-full mt-8 relative flex justify-center'>
           <div className='w-full h-full absolute inset-0 bg-theme-white opacity-10 z-[-1]' />
 
-          <div className='w-full max-w-[1440px] flex justify-between my-12'>
+          <div className='w-full px-8 xl:px-0 max-w-[1440px] flex flex-col sm:flex-row items-center sm:items-start justify-between my-12'>
             <img
               src={attributes.imageUrl}
               alt={`${attributes.imageUrl} Cover Art`}
-              className='w-[265px] h-[375px] object-cover'
+              className='w-[265px] h-[375px] object-cover mb-8 sm:mb-0'
             />
             <div className='flex flex-1 flex-col items-start ml-12'>
               <p className='font-mont font-semibold text-xl text-theme-blue'>
@@ -40,7 +40,7 @@ const Post = ({ gameInfo }) => {
                 dangerouslySetInnerHTML={{ __html: html }}
               ></div>
               <Button
-                className='max-w-[256px] mt-auto self-end'
+                className='max-w-[256px] mt-8 self-center sm:self-end'
                 onClickButton={() =>
                   window.open(attributes.link, '_blank')
                 }

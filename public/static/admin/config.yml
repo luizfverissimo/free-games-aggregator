@@ -4,6 +4,7 @@ backend:
   branch: main
   site_domain: freegames4you.netlify.app
 media_folder: public/static/img
+publish_mode: editorial_workflow
 slug:
   encoding: 'ascii'
   clean_accents: true
@@ -58,14 +59,12 @@ collections:
         }
       - {
           label: 'Start Period (YYYY-MM-DD) moment.js',
-          hint: Add "" arround the date,
           name: 'startPeriod',
           widget: 'string',
           required: true
         }
       - {
           label: 'End Period (YYYY-MM-DD) moment.js',
-          hint: Add "" arround the date,
           name: 'endPeriod',
           widget: 'string',
           required: false

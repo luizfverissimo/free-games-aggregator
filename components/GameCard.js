@@ -6,7 +6,7 @@ function GameCard({ gameData }) {
   const router = useRouter();
 
   return (
-    <div className='w-56 flex flex-col items-center relative'>
+    <div className='w-56 flex flex-col items-center relative my-8 mx-2'>
       {gameData && (
         <>
           <div className='w-full shadow-md transition-all hover:ring-2 ring-theme-green'>

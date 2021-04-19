@@ -4,7 +4,7 @@ import LogoWhite from './LogoWhite';
 function Footer() {
   return (
     <footer className='w-full bg-black py-6'>
-      <div className='w-full max-w-[1440px] mx-auto flex justify-between items-center text-sm font-semibold'>
+      <div className='w-full px-8 mx-auto flex justify-between items-center text-sm text-center font-semibold xl:max-w-[1440px] xl:px-0'>
         <div className='flex items-center'>
           <Link href='/'>
             <a>
@@ -18,7 +18,7 @@ function Footer() {
             </a>
           </p>
         </div>
-        <div className='flex items-center'>
+        <div className='flex items-center flex-col ml-4 xl:flex-row xl:ml-0'>
           <Link href='/about'>
             <a className='underline mx-6'>About</a>
           </Link>
@@ -31,7 +31,7 @@ function Footer() {
           <Link href='/contact'>
             <a className='underline mx-6'>Contact</a>
           </Link>
-          <p className='ml-6'>
+          <p className='xl:ml-6'>
             Created by{' '}
             <a href='http://lfverissimo.com' target="_blank" rel="external" rel="noopener" className='underline'>
               LF Verissimo

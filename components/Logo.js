@@ -1,6 +1,7 @@
-function Logo() {
+function Logo({className}) {
   return (
     <svg
+      className={className}
       width='111'
       height='76'
       viewBox='0 0 111 76'
