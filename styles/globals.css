@@ -31,7 +31,12 @@ body {
   margin: 0.5rem 0;
 }
 
-.donate h3 strong {
+.donate h4 {
+  margin-top: 0.75rem;
+  font-weight: bold;
+}
+
+.donate h4 strong {
   color: #375DFE;
 }
 
