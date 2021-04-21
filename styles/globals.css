@@ -23,7 +23,12 @@ body {
 
 .donate h3, h2, h1 {
   font-weight: bold;
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  margin: 0.75rem 0;
+}
+
+.donate p {
+  margin: 0.5rem 0;
 }
 
 .donate h3 strong {
