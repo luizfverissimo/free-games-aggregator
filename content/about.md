@@ -1,6 +1,11 @@
 ---
 title: About
 ---
-### Free Games 4YOU
 
-Lorem ipsum dolor sit amet, **consectetur adipiscing** elit. Nulla ac elit, odio volutpat. Turpis egestas urna, quisque risus pulvinar dictumst suspendisse pretium. Dui integer vestibulum malesuada morbi ipsum lorem lectus commodo nunc. Purus risus, senectus maecenas laoreet turpis aliquam sed. Cras hendrerit eleifend volutpat scelerisque. Etiam in tortor pulvinar imperdiet nulla. *Viverra faucibus blandit purus amet in. Aliquet elit suspendisse volutpat scelerisque. Dictum sit feugiat a rhoncus ut sed ridiculus ut. Aliquam amet dictumst sit dui nisi, morbi* ultricies vitae. Viverra egestas sit lectus cras. Nibh tempor, mauris dolor purus felis vulputate cursus. Dictumst nunc, et rhoncus integer nisi metus eget. Amet tincidunt non pharetra diam rutrum. Lectus tellus id mauris, et, eget fames et dui. Nunc elit massa eu sit tortor, ullamcorper augue dictumst. Aliquet porttitor quam aliquet sit rhoncus sit ultrices. [Et vel adipiscing orci sapien](http://google.com).
+**Free Games 4YOU** is an aggregator of game links that were paid but are now free, it does not list games that are free-to-play, but it lists games that are within subscription programs like *PSN Plus, Xbox Live Gold, Amazon Prime*, among others. The purpose of this website is to keep information about free games in a single place.
+
+This site was created and is maintained by [**LF Verissimo**](http://lfverissimo.com)
+
+If you have any suggestions for something that we can improve on our project, [get in touch!](https://freegames4you.netlify.app/contact)
+
+**LF Verissimo**

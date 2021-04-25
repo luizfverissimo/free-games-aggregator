@@ -31,12 +31,6 @@ function Footer() {
           <Link href='/contact'>
             <a className='underline mx-6'>Contact</a>
           </Link>
-          <p className='xl:ml-6'>
-            Created by{' '}
-            <a href='http://lfverissimo.com' target="_blank" rel="external" rel="noopener" className='underline'>
-              LF Verissimo
-            </a>
-          </p>
         </div>
       </div>
     </footer>

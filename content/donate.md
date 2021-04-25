@@ -1,5 +1,5 @@
 ---
-hrefButton: "http://lfverissimo.com"
+hrefButton: "https://www.paypal.com/donate?business=EFPUWMW72RNA6&item_name=Keep+this+site+up&currency_code=USD"
 buttonText: "DONATE NOW!"
 ---
 
