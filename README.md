@@ -7,4 +7,4 @@ Project created with *React* with *Next.js* and *Tailwind CSS*.
 ## [🚀 Click here to launch the Site](https://freegames4you.netlify.app/)
 </br>
 
-<img src="/public/img/portfolio2/1.png" alt="1" width="300"/> <img src="/public/img/portfolio2/2.png" alt="2" width="300"/>
+<img src="/img/1.png" alt="1" width="300"/> <img src="/img/2.png" alt="2" width="300"/>
